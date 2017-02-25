@@ -71,7 +71,7 @@ class HPLoading : View, ValueAnimator.AnimatorUpdateListener {
     try {
       color = a.getColor(R.styleable.HPLoading_color, Color.BLACK)
       strokeSize = a.getDimension(R.styleable.HPLoading_stroke_size, 10f)
-      period = a.getInt(R.styleable.HPLoading_period, 500)
+      period = a.getInt(R.styleable.HPLoading_period, 1000)
     } finally {
       a.recycle()
     }
@@ -112,7 +112,7 @@ class HPLoading : View, ValueAnimator.AnimatorUpdateListener {
   }
 
   private fun initValueAnimator() {
-    valueAnimator.duration = period.toLong()
+    valueAnimator.duration = period.toLong() / 2
     valueAnimator.setFloatValues(0f, 1f)
     valueAnimator.addUpdateListener(this)
     valueAnimator.repeatMode = ValueAnimator.REVERSE
