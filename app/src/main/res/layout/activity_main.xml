@@ -11,7 +11,7 @@
       android:layout_width="wrap_content"
       android:layout_height="270dp"
       app:color="@color/loading_color"
-      app:period="200"
+      app:period="400"
       app:stroke_size="7dp"
       />
 </LinearLayout>

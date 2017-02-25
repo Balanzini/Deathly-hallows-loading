@@ -4,7 +4,7 @@
 
     <attr name="color" format="color"/>
 
-    <attr name="stroke_size" format="dimension"/>
+    <attr name="stroke_width" format="dimension"/>
 
     <attr name="period" format="integer"/>
   </declare-styleable>
