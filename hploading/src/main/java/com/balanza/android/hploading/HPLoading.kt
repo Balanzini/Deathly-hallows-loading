@@ -16,7 +16,7 @@ class HPLoading : View, ValueAnimator.AnimatorUpdateListener {
 
   //  Attributes
   var color = 0
-  var strokeSize = 0f
+  var strokewidth = 0f
   var period = 0
 
   val paint = Paint()
@@ -70,7 +70,7 @@ class HPLoading : View, ValueAnimator.AnimatorUpdateListener {
     val a = context.theme.obtainStyledAttributes(attrs, R.styleable.HPLoading, 0, 0)
     try {
       color = a.getColor(R.styleable.HPLoading_color, Color.BLACK)
-      strokeSize = a.getDimension(R.styleable.HPLoading_stroke_size, 10f)
+      strokewidth = a.getDimension(R.styleable.HPLoading_stroke_width, 10f)
       period = a.getInt(R.styleable.HPLoading_period, 1000)
     } finally {
       a.recycle()
@@ -107,7 +107,7 @@ class HPLoading : View, ValueAnimator.AnimatorUpdateListener {
   private fun initPaint() {
     paint.color = color
     paint.style = Paint.Style.STROKE
-    paint.strokeWidth = strokeSize
+    paint.strokeWidth = strokewidth
     paint.isAntiAlias = true
   }
 

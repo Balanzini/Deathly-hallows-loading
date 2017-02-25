@@ -14,9 +14,9 @@ Set time to complete the cycle, in milliseconds:
 app:period="200"
 ```
 
-Set the stroke size:
+Set the stroke width:
 ```java
-app:stroke_size="7dp"
+app:stroke_width="7dp"
 ```
 
 
